@@ -2,16 +2,16 @@
 class Rare < Formula
   desc "Fast, realtime regex-extraction, and aggregation into common formats such as histograms, numerical summaries, tables, and more!"
   homepage "https://github.com/zix99/rare"
-  version "0.1.26"
+  version "0.1.27"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/zix99/rare/releases/download/0.1.26/rare_0.1.26_Darwin_x86_64.tar.gz"
-    sha256 "597a73a5f5b6804b54b6a8158aa920308477d7d06178344537aa803e06163924"
+    url "https://github.com/zix99/rare/releases/download/0.1.27/rare_0.1.27_Darwin_x86_64.tar.gz"
+    sha256 "d8817046dc5dc942afa15e549ff03f3f705e40e288d5691b099308d0e5d46efa"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/zix99/rare/releases/download/0.1.26/rare_0.1.26_Linux_x86_64.tar.gz"
-      sha256 "cd82cf3c41b8424a488ffa63d99eb518af7d750f1cd926e68ed2b4e5a36a99d7"
+      url "https://github.com/zix99/rare/releases/download/0.1.27/rare_0.1.27_Linux_x86_64.tar.gz"
+      sha256 "690fb040f98f921b8ca2c10ab98b76b35ad2969c269317667842acfae25eff77"
     end
   end
 
