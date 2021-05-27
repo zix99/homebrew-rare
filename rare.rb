@@ -5,24 +5,24 @@
 class Rare < Formula
   desc "Fast, realtime regex-extraction, and aggregation into common formats such as histograms, numerical summaries, tables, and more!"
   homepage "https://github.com/zix99/rare"
-  version "0.2.0-rc.1"
+  version "0.2.0-rc.2"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/zix99/rare/releases/download/0.2.0-rc.1/rare_0.2.0-rc.1_Darwin_x86_64.tar.gz"
-    sha256 "65b7436db9146d16688d9a1286ce7571cf06291aa885d6e6f836fd33f21d759d"
+    url "https://github.com/zix99/rare/releases/download/0.2.0-rc.2/rare_0.2.0-rc.2_Darwin_x86_64.tar.gz"
+    sha256 "35f8e844f5efa66c7de01c232cc940edd55b6f0c963df15d48d158a63bdd0516"
   end
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/zix99/rare/releases/download/0.2.0-rc.1/rare_0.2.0-rc.1_Darwin_arm64.tar.gz"
-    sha256 "d4b6fc1b4d30433152aefd0ebb7d90247c0f26dd8b17301b9ada3c127c33cd6b"
+    url "https://github.com/zix99/rare/releases/download/0.2.0-rc.2/rare_0.2.0-rc.2_Darwin_arm64.tar.gz"
+    sha256 "3c1a5664e830e30d8a401b3251985a5ad96caeee37749e5853be7ea271f3bd7c"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/zix99/rare/releases/download/0.2.0-rc.1/rare_0.2.0-rc.1_Linux_x86_64.tar.gz"
-    sha256 "3a3c553073da517101592747b30b814042403aed65a0f128fc3f0c8859256d1c"
+    url "https://github.com/zix99/rare/releases/download/0.2.0-rc.2/rare_0.2.0-rc.2_Linux_x86_64.tar.gz"
+    sha256 "9072fcaf6a511469f73275a30b3c2c0499f24e70bc6586c81dcd591cb43b9b3a"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/zix99/rare/releases/download/0.2.0-rc.1/rare_0.2.0-rc.1_Linux_arm64.tar.gz"
-    sha256 "b2e70da0d44ca3498befba911148ede242fbaf07c126130dde7295c95f177cf3"
+    url "https://github.com/zix99/rare/releases/download/0.2.0-rc.2/rare_0.2.0-rc.2_Linux_arm64.tar.gz"
+    sha256 "3139ef1263cec4214396a8cdefc1cbc11c532a61e4dadd8f15c29dcf14eae20e"
   end
 
   def install
