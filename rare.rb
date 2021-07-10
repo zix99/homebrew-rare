@@ -5,24 +5,29 @@
 class Rare < Formula
   desc "Fast, realtime regex-extraction, and aggregation into common formats such as histograms, numerical summaries, tables, and more!"
   homepage "https://github.com/zix99/rare"
-  version "0.2.0-rc.2"
+  version "0.2.0-rc.3"
   bottle :unneeded
 
-  if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/zix99/rare/releases/download/0.2.0-rc.2/rare_0.2.0-rc.2_Darwin_x86_64.tar.gz"
-    sha256 "35f8e844f5efa66c7de01c232cc940edd55b6f0c963df15d48d158a63bdd0516"
+  on_macos do
+    if Hardware::CPU.intel?
+      url "https://github.com/zix99/rare/releases/download/0.2.0-rc.3/rare_0.2.0-rc.3_Darwin_x86_64.tar.gz"
+      sha256 "7752d80fc5ca26dbbc004645b09046afbed0b8ad805f9766224f4f3353d57c87"
+    end
+    if Hardware::CPU.arm?
+      url "https://github.com/zix99/rare/releases/download/0.2.0-rc.3/rare_0.2.0-rc.3_Darwin_arm64.tar.gz"
+      sha256 "978883d628a554571b5b3a64843eac0d05610f3a2e9e265c67f2676d25823500"
+    end
   end
-  if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/zix99/rare/releases/download/0.2.0-rc.2/rare_0.2.0-rc.2_Darwin_arm64.tar.gz"
-    sha256 "3c1a5664e830e30d8a401b3251985a5ad96caeee37749e5853be7ea271f3bd7c"
-  end
-  if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/zix99/rare/releases/download/0.2.0-rc.2/rare_0.2.0-rc.2_Linux_x86_64.tar.gz"
-    sha256 "9072fcaf6a511469f73275a30b3c2c0499f24e70bc6586c81dcd591cb43b9b3a"
-  end
-  if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/zix99/rare/releases/download/0.2.0-rc.2/rare_0.2.0-rc.2_Linux_arm64.tar.gz"
-    sha256 "3139ef1263cec4214396a8cdefc1cbc11c532a61e4dadd8f15c29dcf14eae20e"
+
+  on_linux do
+    if Hardware::CPU.intel?
+      url "https://github.com/zix99/rare/releases/download/0.2.0-rc.3/rare_0.2.0-rc.3_Linux_x86_64.tar.gz"
+      sha256 "a85f9fb1adbae5d095daf9de01138c3c12c5a2b7043ec790403d09a554c28ddb"
+    end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/zix99/rare/releases/download/0.2.0-rc.3/rare_0.2.0-rc.3_Linux_arm64.tar.gz"
+      sha256 "4b7831486ed167e0be4de495718faac82d4361fa78736be9a977acb5720a0530"
+    end
   end
 
   def install
