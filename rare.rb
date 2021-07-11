@@ -5,28 +5,28 @@
 class Rare < Formula
   desc "Fast, realtime regex-extraction, and aggregation into common formats such as histograms, numerical summaries, tables, and more!"
   homepage "https://github.com/zix99/rare"
-  version "0.2.0-rc.3"
+  version "0.2.0"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/zix99/rare/releases/download/0.2.0-rc.3/rare_0.2.0-rc.3_Darwin_x86_64.tar.gz"
-      sha256 "7752d80fc5ca26dbbc004645b09046afbed0b8ad805f9766224f4f3353d57c87"
+      url "https://github.com/zix99/rare/releases/download/0.2.0/rare_0.2.0_Darwin_x86_64.tar.gz"
+      sha256 "6b5a78fafdfb4c088f45b636b4b5c62ee917d46dc2795fc6d27cd8bf25b5b31f"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/zix99/rare/releases/download/0.2.0-rc.3/rare_0.2.0-rc.3_Darwin_arm64.tar.gz"
-      sha256 "978883d628a554571b5b3a64843eac0d05610f3a2e9e265c67f2676d25823500"
+      url "https://github.com/zix99/rare/releases/download/0.2.0/rare_0.2.0_Darwin_arm64.tar.gz"
+      sha256 "6bf2de95f8ffc1e57181640b5c8b5fab4bd981b76366209e33826fec298bda64"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/zix99/rare/releases/download/0.2.0-rc.3/rare_0.2.0-rc.3_Linux_x86_64.tar.gz"
-      sha256 "a85f9fb1adbae5d095daf9de01138c3c12c5a2b7043ec790403d09a554c28ddb"
+      url "https://github.com/zix99/rare/releases/download/0.2.0/rare_0.2.0_Linux_x86_64.tar.gz"
+      sha256 "1edfb7a13b7226044284baf58357bb262ab56fae5e3fe2c5ad676afcbfa1ebb2"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/zix99/rare/releases/download/0.2.0-rc.3/rare_0.2.0-rc.3_Linux_arm64.tar.gz"
-      sha256 "4b7831486ed167e0be4de495718faac82d4361fa78736be9a977acb5720a0530"
+      url "https://github.com/zix99/rare/releases/download/0.2.0/rare_0.2.0_Linux_arm64.tar.gz"
+      sha256 "5025eb3941c103cf526e4647e12c6e8a277730987a05d1de2700f562fc0e4ce0"
     end
   end
 
