@@ -5,21 +5,21 @@
 class Rare < Formula
   desc "Fast, realtime regex-extraction, and aggregation into common formats such as histograms, numerical summaries, tables, and more!"
   homepage "https://github.com/zix99/rare"
-  version "0.3.0-rc3"
+  version "0.3.0"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/zix99/rare/releases/download/0.3.0-rc3/rare_0.3.0-rc3_Darwin_x86_64.tar.gz"
-      sha256 "7f52c21cddfcccfde822393d9f37c4092d9c6e70f27fc97bf01b742258df870c"
+    if Hardware::CPU.arm?
+      url "https://github.com/zix99/rare/releases/download/0.3.0/rare_0.3.0_Darwin_arm64.tar.gz"
+      sha256 "11c44ef0d31cebfb11078b7133c5eb92051d68a892dde3f16f781a6c4d971359"
 
       def install
         bin.install "rare"
         man1.install Dir["rare.1.gz"]
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/zix99/rare/releases/download/0.3.0-rc3/rare_0.3.0-rc3_Darwin_arm64.tar.gz"
-      sha256 "3872acadb4a31673b32f8ffd16f32ec22f2bfcacf8c7c1c1c2bb58785767098f"
+    if Hardware::CPU.intel?
+      url "https://github.com/zix99/rare/releases/download/0.3.0/rare_0.3.0_Darwin_x86_64.tar.gz"
+      sha256 "7f0df9a11ccb9fadca3c73918ea1ddfd21d39428cea9863d84bef158413e3f0b"
 
       def install
         bin.install "rare"
@@ -29,18 +29,18 @@ class Rare < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/zix99/rare/releases/download/0.3.0-rc3/rare_0.3.0-rc3_Linux_arm64.tar.gz"
-      sha256 "90bd1a53564e9352b49ada1406a35676ea657b0419762f1b25a34b6096d914cd"
+    if Hardware::CPU.intel?
+      url "https://github.com/zix99/rare/releases/download/0.3.0/rare_0.3.0_Linux_x86_64.tar.gz"
+      sha256 "9c9277089c60102b008469057a7c79b563984bec2a690281e88b7d4d94e54160"
 
       def install
         bin.install "rare"
         man1.install Dir["rare.1.gz"]
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/zix99/rare/releases/download/0.3.0-rc3/rare_0.3.0-rc3_Linux_x86_64.tar.gz"
-      sha256 "70bd231f73a46d3877ca4627a7b666b802b9ae6a6f2a03ae0e7e40c313f35763"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/zix99/rare/releases/download/0.3.0/rare_0.3.0_Linux_arm64.tar.gz"
+      sha256 "2e049560ec55e9484ab4cf9e1afa23a9b0743625e3228f0bbba58b8160d5736d"
 
       def install
         bin.install "rare"
