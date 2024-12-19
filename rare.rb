@@ -5,21 +5,12 @@
 class Rare < Formula
   desc "Fast, realtime regex-extraction, and aggregation into common formats such as histograms, numerical summaries, tables, and more!"
   homepage "https://github.com/zix99/rare"
-  version "0.3.4"
+  version "0.4.0"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/zix99/rare/releases/download/0.3.4/rare_0.3.4_Darwin_arm64.tar.gz"
-      sha256 "8ede1b5eddf5e607f31c84036d226ef721130fde453f03d2825a1c9a79d0ada8"
-
-      def install
-        bin.install "rare"
-        man1.install Dir["rare.1.gz"]
-      end
-    end
     if Hardware::CPU.intel?
-      url "https://github.com/zix99/rare/releases/download/0.3.4/rare_0.3.4_Darwin_x86_64.tar.gz"
-      sha256 "44a8882e9d3255c79d34c95f89706b905b30a6f01de29a6bffbbc30277b2c70a"
+      url "https://github.com/zix99/rare/releases/download/0.4.0/rare_0.4.0_Darwin_x86_64.tar.gz"
+      sha256 "b40e325d9b952c64099e7123432971816891fd808647fba04b88765d4935bd79"
 
       def install
         bin.install "rare"
@@ -30,8 +21,8 @@ class Rare < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/zix99/rare/releases/download/0.3.4/rare_0.3.4_Linux_arm64.tar.gz"
-      sha256 "8a166f74dd92761a9194a6845d80092551bde5d3cd233d3c4fb925a132050833"
+      url "https://github.com/zix99/rare/releases/download/0.4.0/rare_0.4.0_Linux_arm64.tar.gz"
+      sha256 "a72711f91fcc5245992129d1835fa6d16f3a1fb8f60e5ea0227c6b51e84e862b"
 
       def install
         bin.install "rare"
@@ -39,8 +30,8 @@ class Rare < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/zix99/rare/releases/download/0.3.4/rare_0.3.4_Linux_x86_64.tar.gz"
-      sha256 "8486bd6da8a3c2a60060613ef34c2662476cf18bdb1b867ecf74b861f886b5e4"
+      url "https://github.com/zix99/rare/releases/download/0.4.0/rare_0.4.0_Linux_x86_64.tar.gz"
+      sha256 "d7ea1dda17a0f43d0d6457046e052d3916a0e6aa345a8bfb3ae5c3eeda0a6e2c"
 
       def install
         bin.install "rare"
