@@ -10,7 +10,16 @@ class Rare < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/zix99/rare/releases/download/0.4.0/rare_0.4.0_Darwin_x86_64.tar.gz"
-      sha256 "b40e325d9b952c64099e7123432971816891fd808647fba04b88765d4935bd79"
+      sha256 "f8578c269cb6172b5717ff56c2c8b8b935f89cc087eef55e6e4e14a8a68e569d"
+
+      def install
+        bin.install "rare"
+        man1.install Dir["rare.1.gz"]
+      end
+    end
+    if Hardware::CPU.arm?
+      url "https://github.com/zix99/rare/releases/download/0.4.0/rare_0.4.0_Darwin_arm64.tar.gz"
+      sha256 "94ced65356808c8c441968df44e4c61e27134988eaa8c37081c838b6d70a0063"
 
       def install
         bin.install "rare"
@@ -20,22 +29,26 @@ class Rare < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/zix99/rare/releases/download/0.4.0/rare_0.4.0_Linux_arm64.tar.gz"
-      sha256 "a72711f91fcc5245992129d1835fa6d16f3a1fb8f60e5ea0227c6b51e84e862b"
+    if Hardware::CPU.intel?
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/zix99/rare/releases/download/0.4.0/rare_0.4.0_Linux_x86_64.tar.gz"
+        sha256 "df41357268656f2356ea282abaa76522d0f435f8561c5b6a8c0c14d48d816d5c"
 
-      def install
-        bin.install "rare"
-        man1.install Dir["rare.1.gz"]
+        def install
+          bin.install "rare"
+          man1.install Dir["rare.1.gz"]
+        end
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/zix99/rare/releases/download/0.4.0/rare_0.4.0_Linux_x86_64.tar.gz"
-      sha256 "d7ea1dda17a0f43d0d6457046e052d3916a0e6aa345a8bfb3ae5c3eeda0a6e2c"
+    if Hardware::CPU.arm?
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/zix99/rare/releases/download/0.4.0/rare_0.4.0_Linux_arm64.tar.gz"
+        sha256 "c5ba1829a088045f65e32c37b4e88f08e8e82e4b67a046313451208b5184ceba"
 
-      def install
-        bin.install "rare"
-        man1.install Dir["rare.1.gz"]
+        def install
+          bin.install "rare"
+          man1.install Dir["rare.1.gz"]
+        end
       end
     end
   end
