@@ -10,7 +10,7 @@ class Rare < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/zix99/rare/releases/download/0.4.1/rare_0.4.1_Darwin_x86_64.tar.gz"
-      sha256 "d9749b24a0a2fab6e68fcc028078c360b19b59355100fd7f6fc16419a03c8bf9"
+      sha256 "6ab0a9a9a9d5af4b58b4e7d7e0515024032e31e35be31fd13edbb2a816747623"
 
       def install
         bin.install "rare"
@@ -19,7 +19,7 @@ class Rare < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/zix99/rare/releases/download/0.4.1/rare_0.4.1_Darwin_arm64.tar.gz"
-      sha256 "8ad272c0787cd73529f05770fb53af2d884ed93505bea6143b120e0303e0db55"
+      sha256 "7d4b6f1d39eb6bd25aa82adc9f2685b6f911182b45d7dd078d64cbef4a14b0b6"
 
       def install
         bin.install "rare"
@@ -32,7 +32,7 @@ class Rare < Formula
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
         url "https://github.com/zix99/rare/releases/download/0.4.1/rare_0.4.1_Linux_x86_64.tar.gz"
-        sha256 "1ebc219607916106f9cc9dffbdd30d7a862a7fe686619545988cb9d013a383ef"
+        sha256 "b60e62a8e7a4a463e523efcffc029a86c0026d1fb5f84d59fb13e4064dab3add"
 
         def install
           bin.install "rare"
@@ -43,7 +43,7 @@ class Rare < Formula
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
         url "https://github.com/zix99/rare/releases/download/0.4.1/rare_0.4.1_Linux_arm64.tar.gz"
-        sha256 "e210440caa56533fc9264a4eb946d99e8001f9339b94384673ebe5f0c96b5321"
+        sha256 "c895feeddefdb70d7c4c9151a3cfddae8122afc55214b2ad7ecd77dd22f3f5e4"
 
         def install
           bin.install "rare"
